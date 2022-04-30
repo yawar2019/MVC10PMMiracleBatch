@@ -256,5 +256,65 @@ namespace MVC10PMMiracleBatch.Controllers
             return View(listEmp);
         }
 
+        public PartialViewResult ExampleonPartialView3()
+        {
+            EmployeeModel emp = new Models.EmployeeModel();
+            emp.EmpId = 1;
+            emp.EmpName = "alok";
+            emp.EmpSalary = 4567;
+
+
+            EmployeeModel emp1 = new Models.EmployeeModel();
+            emp1.EmpId = 2;
+            emp1.EmpName = "Anuj";
+            emp1.EmpSalary = 6567;
+
+            EmployeeModel emp2 = new Models.EmployeeModel();
+            emp2.EmpId = 3;
+            emp2.EmpName = "Radha";
+            emp2.EmpSalary = 7567;
+
+            List<EmployeeModel> listEmp = new List<EmployeeModel>();
+            listEmp.Add(emp);
+            listEmp.Add(emp1);
+            listEmp.Add(emp2);
+
+            return PartialView("_MyEmployeePartialView", listEmp);
+        }
+
+        public JsonResult GetJsonData()
+        {
+            EmployeeModel emp = new Models.EmployeeModel();
+            emp.EmpId = 1;
+            emp.EmpName = "alok";
+            emp.EmpSalary = 4567;
+
+
+            EmployeeModel emp1 = new Models.EmployeeModel();
+            emp1.EmpId = 2;
+            emp1.EmpName = "Anuj";
+            emp1.EmpSalary = 6567;
+
+            EmployeeModel emp2 = new Models.EmployeeModel();
+            emp2.EmpId = 3;
+            emp2.EmpName = "Radha";
+            emp2.EmpSalary = 7567;
+
+            List<EmployeeModel> listEmp = new List<EmployeeModel>();
+            listEmp.Add(emp);
+            listEmp.Add(emp1);
+            listEmp.Add(emp2);
+
+            return Json(listEmp,JsonRequestBehavior.AllowGet);
+
+
+        }
+
+
+        public ViewResult AccessjsonData()
+        {
+
+            return View();
+        }
     }
 }

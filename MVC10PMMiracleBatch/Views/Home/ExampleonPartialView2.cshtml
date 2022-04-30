@@ -5,4 +5,33 @@
 
 <h2>ExampleonPartialView2</h2>
 
-@Html.Partial("_MyEmployeePartialView",Model)
+@{var s=Html.Partial("_MyEmployeePartialView", Model);
+
+    int i = 9;
+    if (i < 10) {
+        @s
+    }
+    else
+    {
+       <h1>No partial view</h1>
+    }
+    }
+@{
+    Html.RenderPartial("_MyEmployeePartialView", Model);
+  
+    }
+
+@*
+    partial method is having return type as MVCHtmlString
+    Render Partial Method Return type is void
+    
+    In terms of Syntax Partial Method is single line block of C# code
+    where as Render partial Method  is Multiline bloc of c# code 
+    
+    Partial Methos is Some what Slower Compare to Render PArtial MEthod
+    as PArtial Method will Render and Return String 
+
+    where as Render partial faster because as it only render the MvcHtmlString.
+    
+    
+    *@

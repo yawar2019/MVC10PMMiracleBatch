@@ -169,6 +169,7 @@
     <Content Include="Views\Shared\_MyPartialView.cshtml" />
     <Content Include="Views\Home\ExampleonPartialView2.cshtml" />
     <Content Include="Views\Shared\_MyEmployeePartialView.cshtml" />
+    <Content Include="Views\Home\AccessjsonData.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
