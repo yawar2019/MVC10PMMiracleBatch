@@ -316,5 +316,26 @@ namespace MVC10PMMiracleBatch.Controllers
 
             return View();
         }
+
+        public ContentResult GetContentData(int? id)
+        {
+            if (id == 1)
+            {
+                return Content("Hello World");
+            }
+            else if (id == 2)
+            {
+                return Content("<p style=color:red>Hello World</p>");
+            }
+            else
+            {
+                return Content("<script>alert('get me json data')</script>");
+            }
+        }
+
+        //public EmptyResult getEmptyData()
+        //{
+        //    return Empty();
+        //}
     }
 }
