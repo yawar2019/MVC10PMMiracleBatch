@@ -10,107 +10,107 @@ using DatabaseApproach.Models;
 
 namespace DatabaseApproach.Controllers
 {
-    public class EmployeeController : Controller
+    public class DepartmentsController : Controller
     {
-        private EmployeeDbEntities db = new EmployeeDbEntities();
+        private EmployeeEntities db = new EmployeeEntities();
 
-        // GET: Employee
+        // GET: Departments
         public ActionResult Index()
         {
-            return View(db.tbl_Employee.ToList());
+            return View(db.Departments.ToList());
         }
 
-        // GET: Employee/Details/5
+        // GET: Departments/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            tbl_Employee tbl_Employee = db.tbl_Employee.Find(id);
-            if (tbl_Employee == null)
+            Department department = db.Departments.Find(id);
+            if (department == null)
             {
                 return HttpNotFound();
             }
-            return View(tbl_Employee);
+            return View(department);
         }
 
-        // GET: Employee/Create
+        // GET: Departments/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Employee/Create
+        // POST: Departments/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "EmpId,EmpName,EmpSalary")] tbl_Employee tbl_Employee)
+        public ActionResult Create([Bind(Include = "DeptId,DeptName,Description,No_of_Employees")] Department department)
         {
             if (ModelState.IsValid)
             {
-                db.tbl_Employee.Add(tbl_Employee);
+                db.Departments.Add(department);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(tbl_Employee);
+            return View(department);
         }
 
-        // GET: Employee/Edit/5
+        // GET: Departments/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            tbl_Employee tbl_Employee = db.tbl_Employee.Find(id);
-            if (tbl_Employee == null)
+            Department department = db.Departments.Find(id);
+            if (department == null)
             {
                 return HttpNotFound();
             }
-            return View(tbl_Employee);
+            return View(department);
         }
 
-        // POST: Employee/Edit/5
+        // POST: Departments/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "EmpId,EmpName,EmpSalary")] tbl_Employee tbl_Employee)
+        public ActionResult Edit([Bind(Include = "DeptId,DeptName,Description,No_of_Employees")] Department department)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(tbl_Employee).State = EntityState.Modified;
+                db.Entry(department).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(tbl_Employee);
+            return View(department);
         }
 
-        // GET: Employee/Delete/5
+        // GET: Departments/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            tbl_Employee tbl_Employee = db.tbl_Employee.Find(id);
-            if (tbl_Employee == null)
+            Department department = db.Departments.Find(id);
+            if (department == null)
             {
                 return HttpNotFound();
             }
-            return View(tbl_Employee);
+            return View(department);
         }
 
-        // POST: Employee/Delete/5
+        // POST: Departments/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            tbl_Employee tbl_Employee = db.tbl_Employee.Find(id);
-            db.tbl_Employee.Remove(tbl_Employee);
+            Department department = db.Departments.Find(id);
+            db.Departments.Remove(department);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

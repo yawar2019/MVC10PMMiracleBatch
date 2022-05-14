@@ -12,10 +12,11 @@ namespace DatabaseApproach.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class tbl_Employee
+    public partial class Department
     {
-        public int EmpId { get; set; }
-        public string EmpName { get; set; }
-        public Nullable<int> EmpSalary { get; set; }
+        public int DeptId { get; set; }
+        public string DeptName { get; set; }
+        public string Description { get; set; }
+        public Nullable<int> No_of_Employees { get; set; }
     }
 }
