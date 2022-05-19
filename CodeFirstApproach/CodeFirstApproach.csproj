@@ -138,9 +138,17 @@
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
+    <None Include="scripts\jquery.validate-vsdoc.js" />
+    <Content Include="scripts\jquery.validate.js" />
+    <Content Include="scripts\jquery.validate.min.js" />
+    <Content Include="scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
     <Content Include="Views\Employee\Create.cshtml" />
+    <Content Include="Views\Employee\Edit.cshtml" />
+    <Content Include="Views\Employee\Delete.cshtml" />
+    <Content Include="Views\Employee\Index2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -148,6 +156,21 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202205181712544_InitialCreate.cs" />
+    <Compile Include="Migrations\202205181712544_InitialCreate.designer.cs">
+      <DependentUpon>202205181712544_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205191715282_AddedDepartment.cs" />
+    <Compile Include="Migrations\202205191715282_AddedDepartment.designer.cs">
+      <DependentUpon>202205191715282_AddedDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205191719547_AddedDeptId_tblEmployee.cs" />
+    <Compile Include="Migrations\202205191719547_AddedDeptId_tblEmployee.designer.cs">
+      <DependentUpon>202205191719547_AddedDeptId_tblEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\DepartmentModel.cs" />
+    <Compile Include="Models\EmpDeptModel.cs" />
     <Compile Include="Models\EmployeeContext.cs" />
     <Compile Include="Models\EmployeeModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -174,6 +197,17 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202205181712544_InitialCreate.resx">
+      <DependentUpon>202205181712544_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205191715282_AddedDepartment.resx">
+      <DependentUpon>202205191715282_AddedDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205191719547_AddedDeptId_tblEmployee.resx">
+      <DependentUpon>202205191719547_AddedDeptId_tblEmployee.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
