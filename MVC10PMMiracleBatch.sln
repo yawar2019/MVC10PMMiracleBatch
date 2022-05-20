@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseApproach", "Databas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirstApproach", "CodeFirstApproach\CodeFirstApproach.csproj", "{DE66C935-5460-48A2-885A-6DF202FC5216}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelFirstApproach", "ModelFirstApproach\ModelFirstApproach.csproj", "{7EB2F6E9-581E-4743-A3E7-EEC2B3C8FCF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DapperExample", "DapperExample\DapperExample.csproj", "{8A38147B-ED5D-45F3-951D-1EAC889B2C0C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{DE66C935-5460-48A2-885A-6DF202FC5216}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE66C935-5460-48A2-885A-6DF202FC5216}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE66C935-5460-48A2-885A-6DF202FC5216}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EB2F6E9-581E-4743-A3E7-EEC2B3C8FCF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EB2F6E9-581E-4743-A3E7-EEC2B3C8FCF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EB2F6E9-581E-4743-A3E7-EEC2B3C8FCF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EB2F6E9-581E-4743-A3E7-EEC2B3C8FCF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A38147B-ED5D-45F3-951D-1EAC889B2C0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A38147B-ED5D-45F3-951D-1EAC889B2C0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A38147B-ED5D-45F3-951D-1EAC889B2C0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A38147B-ED5D-45F3-951D-1EAC889B2C0C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
