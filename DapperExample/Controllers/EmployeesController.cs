@@ -65,5 +65,34 @@ namespace DapperExample.Controllers
             return View();
         }
 
+        public ActionResult ViewBagandViewData()
+        {
+            ViewData["Id"] = "Anil";
+            return RedirectToAction("ViewBagandViewData2");
+        }
+
+        public ActionResult ViewBagandViewData2()
+        {
+            string data=ViewData["Id"].ToString();
+            return View();
+        }
+
+        public ActionResult TempdataExample()
+        {
+            TempData["StudenetName"] = "Anil";
+            return RedirectToAction("TempdataExample2");
+        }
+
+        public ActionResult TempdataExample2()
+        {
+
+
+            string Name = Convert.ToString(TempData["StudenetName"]);
+
+            // TempData.Keep();
+            var s = TempData.Peek("StudenetName");
+
+            return Content(s.ToString());
+        }
     }
 }

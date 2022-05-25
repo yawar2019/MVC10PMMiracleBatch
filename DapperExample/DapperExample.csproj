@@ -168,6 +168,7 @@
     <Content Include="Views\Employees\Delete.cshtml" />
     <Content Include="Views\Employees\Edit.cshtml" />
     <Content Include="Views\Shared\_MasterLayout.cshtml" />
+    <Content Include="Views\Employees\ViewBagandViewData.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
