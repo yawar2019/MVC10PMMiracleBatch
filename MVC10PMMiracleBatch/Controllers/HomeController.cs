@@ -337,5 +337,11 @@ namespace MVC10PMMiracleBatch.Controllers
         //{
         //    return Empty();
         //}
+
+        public ActionResult HtmlHelperExample()
+        {
+
+            return View();
+        }
     }
 }

@@ -1,0 +1,28 @@
+﻿@model MVC10PMMiracleBatch.Models.EmployeeModel
+@{
+    ViewBag.Title = "HtmlHelperExample";
+}
+
+<h2>HtmlHelperExample</h2>
+
+<input type="text" name="name" value="Ravi" style="background-color:blueviolet;color:white;" onclick="fun()" />
+@Html.TextBox("FirstName","Anil",new { style = "background-color:blueviolet;color:white;", @class="form-control",@onclick= "fun()" })<br />
+
+<br />
+
+@Html.TextBoxFor(x => x.EmpName)<br />
+@Html.EditorFor(x=>x.EmpName)
+
+
+@Html.Password("empName","text")
+
+@Html.DropDownList("Countries", new List<SelectListItem>() {
+
+new SelectListItem {Text="India",Value="1"},
+new SelectListItem {Text="japan",Value="2",Selected=true},
+new SelectListItem {Text="china",Value="3"}
+})
+
+<script>
+    function fun() { alert("Welcome to train"); }
+</script>
