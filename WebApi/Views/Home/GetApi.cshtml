@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "GetApi";
+}
+
+<h2>GetApi</h2>
+
+<table id="table-1">
+    <thead>
+        <tr>
+            <th>
+                Employee Id
+            </th>
+            <th>
+                EmployeeName
+            </th>
+            <th>
+                EmployeeSalary
+            </th>
+             
+        </tr>
+    </thead>
+   
+</table>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+<script>
+        onload = function showdata() {
+            $.ajax({
+                url: "http://localhost:50201/api/EmployeesApi",
+                type: "Get",
+                datatype: "json",
+                success: function (result) {
+                    alert(result);
+                    $.each(result, function (i, key) {
+
+                        $("#table-1 tr:last").after('<tr><td>' + key.EmpId + '</td><td>' + key.EmpName + '</td><td>' + key.EmpSalary + '</td></tr>' + '</td></tr>');
+                    });
+                }
+            });
+        }
+    </script>
+
+//https://supriyatest.blogspot.com/2019/11/creating-entity-framework-in-aspnet-web.html

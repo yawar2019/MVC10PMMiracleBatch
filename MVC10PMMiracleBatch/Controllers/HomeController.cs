@@ -343,5 +343,15 @@ namespace MVC10PMMiracleBatch.Controllers
 
             return View();
         }
+
+        public ActionResult RegistrationForm()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult RegistrationForm(RegistrationModel reg)
+        {
+            return View();
+        }
     }
 }

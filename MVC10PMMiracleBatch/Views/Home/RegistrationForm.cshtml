@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewBag.Title = "RegistrationForm";
+}
+
+<h2>RegistrationForm</h2>
+
+<form action="~/Home/RegistrationForm" method="post">
+    <div class="row">
+        <div class="col-md-2">
+            <label>UserName</label>
+        </div>
+        <div class="col-md-10">
+            @Html.TextBox("UserName", null, new { @class = "form-control" })
+        </div>
+        <div class="col-md-2">
+            <label>Password</label>
+        </div>
+        <div class="col-md-10">
+            @Html.Password("Password", null, new { @class = "form-control" })
+        </div>
+        <div class="col-md-2">
+            <label>Gender</label>
+        </div>
+        <div class="col-md-10">
+            @Html.RadioButton("Gender", "Male", true)<span>Male</span>
+            @Html.RadioButton("Gender", "FeMale",true)<span>FeMale</span>
+        </div>
+        <div class="col-md-2">
+            <label>Country</label>
+        </div>
+        <div class="col-md-10">
+            @Html.DropDownList("Country", new List<SelectListItem>() {
+           new SelectListItem {Text="India",Value="India" },
+           new SelectListItem {Text="China",Value="China" },
+           new SelectListItem {Text="USA",Value="USA" }
+
+       })
+        </div>
+        <div class="col-md-2">
+            <label>Accept</label>
+        </div>
+        <div class="col-md-10">
+            @Html.CheckBox("Accept");
+            })
+            <div class="col-md-2">
+                <label>Address</label>
+            </div>
+            <div class="col-md-10">
+                @Html.TextArea("Address", "Hyderabad", 20, 15, new { @class = "form-control" });
+                })
+            </div>
+        </div>
+
+        <input type="submit" name="name" value="Submit" class="btn btn-primary" />
+        </div>
+</form>

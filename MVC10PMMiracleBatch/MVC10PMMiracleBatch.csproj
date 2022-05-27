@@ -144,6 +144,7 @@
     <Compile Include="Models\DepartmentModel.cs" />
     <Compile Include="Models\EmpDept.cs" />
     <Compile Include="Models\EmployeeModel.cs" />
+    <Compile Include="Models\RegistrationModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -173,6 +174,7 @@
     <Content Include="Views\Shared\_MasterLayout.cshtml" />
     <Content Include="Views\Shared\_MyLayout.cshtml" />
     <Content Include="Views\Home\HtmlHelperExample.cshtml" />
+    <Content Include="Views\Home\RegistrationForm.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
