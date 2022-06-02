@@ -1,4 +1,5 @@
-﻿using MVC10PMMiracleBatch.Models;
+﻿using MVC10PMMiracleBatch.CustomFilter;
+using MVC10PMMiracleBatch.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -337,10 +338,10 @@ namespace MVC10PMMiracleBatch.Controllers
         //{
         //    return Empty();
         //}
-
+        [MyFilter]
         public ActionResult HtmlHelperExample()
         {
-
+            ViewBag.player = "Ms Dhoni";
             return View();
         }
 
@@ -352,6 +353,20 @@ namespace MVC10PMMiracleBatch.Controllers
         public ActionResult RegistrationForm(RegistrationModel reg)
         {
             return View();
+        }
+
+        public ActionResult getState(string id)
+        {
+            string Country=string.Empty;
+
+            if (id =="India") {
+                Country = "India is selected";
+            }
+            else
+            {
+                Country = "Japan is selected";
+            }
+            return Json(Country, JsonRequestBehavior.AllowGet);
         }
     }
 }

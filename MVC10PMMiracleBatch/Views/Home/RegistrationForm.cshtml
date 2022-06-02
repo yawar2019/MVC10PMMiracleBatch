@@ -52,6 +52,40 @@
             </div>
         </div>
 
+
+
+         
+
+
+      
+
+
         <input type="submit" name="name" value="Submit" class="btn btn-primary" />
         </div>
 </form>
+
+<script src="~/scripts/jquery-1.10.2.js"></script>
+
+<script>
+    $("#Country").on("change", function () {
+
+    var selectedCountry = $("#Country option:selected").text();
+alert("Country is changed "+selectedCountry);
+
+$.ajax({
+
+    url: "@Url.Action("getState","Home")",
+    type: "GET",
+    datatype: "JSON",
+    data: {
+        id: selectedCountry
+    },
+    success: function (result)
+    {
+
+        alert(result);
+    }
+})
+
+});
+</script>
