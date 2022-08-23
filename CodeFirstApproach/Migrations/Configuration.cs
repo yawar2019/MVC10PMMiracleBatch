@@ -9,8 +9,7 @@
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
-            ContextKey = "CodeFirstApproach.Models.EmployeeContext";
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(CodeFirstApproach.Models.EmployeeContext context)

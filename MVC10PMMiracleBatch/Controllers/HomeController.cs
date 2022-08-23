@@ -5,7 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+using MVC10PMMiracleBatch.ServiceReference1;
+using MVC10PMMiracleBatch.ServiceReference3;
 namespace MVC10PMMiracleBatch.Controllers
 {
     public class HomeController : Controller
@@ -367,6 +368,15 @@ namespace MVC10PMMiracleBatch.Controllers
                 Country = "Japan is selected";
             }
             return Json(Country, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult GetConsumeWebService()
+        {
+            //MyWebServiceSoapClient obj = new ServiceReference1.MyWebServiceSoapClient();
+            //ServiceReference3.Service1Client obj = new Service1Client("WSHttpBinding_IService1");
+            //return Content("the result is"+obj.Add(12,5).ToString());
+           Service1Client obj1 = new Service1Client("NetTcpBinding_IService1");
+            return Content("the result is" + obj1.Add(12, 5).ToString());
         }
     }
 }

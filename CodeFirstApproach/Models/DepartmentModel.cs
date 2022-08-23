@@ -11,5 +11,6 @@ namespace CodeFirstApproach.Models
         [Key]
         public int DeptId { get; set; }
         public string DeptName { get; set; }
+        public string Location { get; set; }
     }
 }

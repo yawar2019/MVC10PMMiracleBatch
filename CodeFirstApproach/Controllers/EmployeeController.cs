@@ -16,7 +16,7 @@ namespace CodeFirstApproach.Controllers
         public ActionResult Index2()
         {
             var result = (from e in db.EmployeeModels
-                          join d in db.DepartmentModels
+                          join d in db.DepartmentTble
                           on e.DeptId equals d.DeptId
                           select new EmpDeptModel
                           {

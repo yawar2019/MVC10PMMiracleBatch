@@ -156,17 +156,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202205181712544_InitialCreate.cs" />
-    <Compile Include="Migrations\202205181712544_InitialCreate.designer.cs">
-      <DependentUpon>202205181712544_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202205191715282_AddedDepartment.cs" />
-    <Compile Include="Migrations\202205191715282_AddedDepartment.designer.cs">
-      <DependentUpon>202205191715282_AddedDepartment.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202205191719547_AddedDeptId_tblEmployee.cs" />
-    <Compile Include="Migrations\202205191719547_AddedDeptId_tblEmployee.designer.cs">
-      <DependentUpon>202205191719547_AddedDeptId_tblEmployee.cs</DependentUpon>
+    <Compile Include="Migrations\202208222121455_ert.cs" />
+    <Compile Include="Migrations\202208222121455_ert.designer.cs">
+      <DependentUpon>202208222121455_ert.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DepartmentModel.cs" />
@@ -199,14 +191,8 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202205181712544_InitialCreate.resx">
-      <DependentUpon>202205181712544_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202205191715282_AddedDepartment.resx">
-      <DependentUpon>202205191715282_AddedDepartment.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202205191719547_AddedDeptId_tblEmployee.resx">
-      <DependentUpon>202205191719547_AddedDeptId_tblEmployee.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202208222121455_ert.resx">
+      <DependentUpon>202208222121455_ert.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
